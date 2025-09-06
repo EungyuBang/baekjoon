@@ -1,12 +1,9 @@
 A, B = input().split()
-# A = '123'
-# B = '456'
 
 C = list([A[2],A[1],A[0]])
 D = list([B[2],B[1],B[0]])
 
-
-E = "".join(C)
+E = "".join(C) # 문자열만 가능
 F = ''.join(D)
 
 if C > D :

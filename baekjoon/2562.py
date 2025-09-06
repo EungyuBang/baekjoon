@@ -7,8 +7,6 @@
 # g = int(input())
 # h = int(input())
 # i = int(input())
-
-
 # arr = [a,b,c,d,e,f,g,h,i]
 # maxValue = max(arr)
 # maxValueNum = arr.index(maxValue)

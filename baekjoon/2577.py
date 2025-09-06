@@ -1,7 +1,6 @@
 A = int(input())
 B = int(input())
 C = int(input())
-
 multifly = A * B * C
 
 # count0 = 0
