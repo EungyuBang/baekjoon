@@ -16,3 +16,15 @@ def hanoi(n, s, e) :  #n - 옮길 원판 개수 , s - 시작하는 기둥 , e - 
 print(2 ** n - 1) # n개의 판 이동횟수 구하는 식
 if n <= 20: # 조건
     hanoi(n, 1, 3)
+
+
+# hanoi(3, 1, 3)
+# ├─ hanoi(2, 1, 2)
+# │   ├─ hanoi(1, 1, 3) - print(1, 3)
+# │   ├─ print(1, 2)
+# │   └─ hanoi(1, 3, 2) - print(3, 2)
+# ├─ print(1, 3)
+# └─ hanoi(2, 2, 3)
+#     ├─ hanoi(1, 2, 1) - print(2, 1)
+#     ├─ print(2, 3)
+#     └─ hanoi(1, 1, 3) - print(1, 3)

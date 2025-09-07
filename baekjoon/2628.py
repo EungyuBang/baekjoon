@@ -1,7 +1,7 @@
 width, height = map(int,input()) # 종이의 가로 세로 길이 10 8
 num = int(input())
-width_cut = [0,width] # 가로 자르기 -> 세로 길이 분할 (가로로 자르면 세로 길이에 영향) [0, 10]
-height_cut = [0,height] # 세로 자르기 -> 가로 길이 분할 (세로로 자르면 가로 길이에 영향) [0, 8]
+width_cut = [0,width] # 가로 자르기 -> 세로 길이 분할 (가로로 자르면 세로 길이에 영향) [0, 10] 시작점이 0 이니까 0, ~
+height_cut = [0,height] # 세로 자르기 -> 가로 길이 분할 (세로로 자르면 가로 길이에 영향) [0, 8] 시작점이 0 이니까 0, ~
 
 for _ in range(num) :
     x,y = map(int,input().split()) #입력된 값 공백 기준으로 나누고 0 3 , 1 4
