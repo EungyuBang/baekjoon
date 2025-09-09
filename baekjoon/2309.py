@@ -32,12 +32,14 @@ for i in range(len(height_nums)):
     if remove_i != -1:   # 찾았으면 바깥 for도 종료
         break
     
-height_nums.sort()
+
 
 
 # pop은 뒤에서부터 해야 인덱스가 안 꼬임 (j가 더 크니까)
 height_nums.pop(remove_j)
 height_nums.pop(remove_i)
+
+height_nums.sort()
 
 
 for x in height_nums :
