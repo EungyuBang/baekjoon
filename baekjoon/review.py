@@ -295,6 +295,9 @@ sorted_num = sorted(num_list)
 for i in sorted_num :
   print(i)
 
+# for i in sorted(num_list) :
+#   print(i)
+
 # sort() → 원본 리스트 자체를 정렬, 반환값 없음.
 # sorted() → 원본은 그대로, 정렬된 새 리스트 반환.
 # num_list = [4, 1, 3, 2]
@@ -302,8 +305,7 @@ for i in sorted_num :
 # print(num_list)    # [4, 1, 3, 2]  <- 원본은 그대로
 # print(sorted_num)  # [1, 2, 3, 4]  <- 새 리스트
 
-# for i in sorted(num_list) :
-#   print(i)
+
 
 
 # 2751
@@ -318,3 +320,53 @@ for i in range(N) :
 num_list.sort()
 for i in num_list :
   print(i)
+
+# 10989
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+list = [0] * 10001
+
+for i in range(N) :
+  list[int(input())] += 1
+
+for i in range(len(list)) :
+   if list[i] != 0 :
+     for _ in range(list[i]) :
+       print(i)
+
+# 1181 
+
+# N = int(input())
+# words = list(input() for _ in range(N))
+
+# words = list(set(words))
+# words.sort()
+# words.sort(key=len)
+
+# for i in words :
+#   print(i)
+
+# 2309 
+
+height_nums = [int(input()) for _ in range(9)]
+
+target = sum(height_nums) - 100
+target_i = 0
+target_j = 0
+
+for i in range(len(height_nums)) : # 배열 안의 모든 수까리 더해야함 -> 반복문 2개
+  for j in range(i+1 ,len(height_nums)) : # 중복 제거 위해서 범위 i+1 
+    if height_nums[i] + height_nums[j] == target :
+      target_i = i
+      target_j = j
+      
+      
+height_nums.pop(target_j)
+height_nums.pop(target_i)
+
+height_nums.sort()
+
+for i in height_nums :
+   print(i)
