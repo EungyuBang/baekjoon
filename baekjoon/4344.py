@@ -14,3 +14,16 @@ for _ in range(C) :
   print("{:.3f}%".format(ratio)) # 소수점 셋째 자리까지 출력
 
 
+# c = int(input())
+# for _ in range(c) :
+#   scores = list(map(int, input().split()))
+#   case_num = scores[1:]
+#   A = sum(case_num)/len(case_num) # 평균
+#   cnt = 0
+#   for i in case_num :
+#     if i > A :
+#       cnt += 1
+#   C = cnt/len(case_num) * 100
+#   print('{:.3f}%'.format(C))
+
+    

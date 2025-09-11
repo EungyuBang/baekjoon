@@ -27,3 +27,24 @@ while n != 0:
 
 print(answer)
 
+# --- 재귀 함수 풀이 추가 ---
+def z_recursive(n, r, c):
+    if n == 0:
+        return 0  # 더 이상 분할할 수 없을 때(기저 조건)
+    size = 2 ** (n - 1)
+    # 1사분면 (왼쪽 위)
+    if r < size and c < size:
+        return z_recursive(n - 1, r, c)
+    # 2사분면 (오른쪽 위)
+    elif r < size and c >= size:
+        return size * size + z_recursive(n - 1, r, c - size)
+    # 3사분면 (왼쪽 아래)
+    elif r >= size and c < size:
+        return size * size * 2 + z_recursive(n - 1, r - size, c)
+    # 4사분면 (오른쪽 아래)
+    else:
+        return size * size * 3 + z_recursive(n - 1, r - size, c - size)
+
+# 재귀 함수 결과 출력 (반복문 풀이와 동일한 입력 사용)
+print(z_recursive(*map(int, input().split())))
+

@@ -6,10 +6,12 @@
 #     print(S[j]*int(R), end='') 인덱스 번호로 뽑아서 곱함 
 #   print()
 
+
+
 T = int(input())
 
 for _ in range(T) :
-  R,S  = input().split() 
-  for A in S :
-    print(A*int(R),end='') # 그냥 바로 들어가서 하나하나 뽑아서 곱함
-  print()
+  R, S = input().split()
+  for x in S :
+   print(x*int(R), end='') # -> end='' 줄바꿈 근데 모든 테스트 케이스를 한 줄로 내보냄
+  print() # 이걸로 테스트 케이스들끼리 줄 바꿈

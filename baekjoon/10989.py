@@ -1,11 +1,19 @@
 import sys
-N = int(sys.stdin.readline())
-list = []
+input = sys.stdin.readline
 
-for i in range(N) :
-  list.append(int(sys.stdin.readline()))
+#계수정렬 활용
+n = int(input())
+arr = [0] * (10000 + 1) # 입력값이 10000개까지 주어지니 10000 + 1개의 리스트 선언
 
-list.sort()
+#각 입력값에 해당하는 인덱스의 값 증가
+for _ in range(n):
+    arr[int(input())] += 1
+  
+#arr에 기록된 정보 확인
+for i in range(len(arr)):
+    if arr[i] != 0: #0이 아닌 데이터, 즉 입력받은 데이터들을 출력 - 입력 받지 못한 데이터들은 cnt가 안되니까
+        for _ in range(arr[i]):
+            print(i)
 
-for i in list :
-  sys.stdout.write(i)
+
+#  https://kill-xxx.tistory.com/26 계수정렬 참고
