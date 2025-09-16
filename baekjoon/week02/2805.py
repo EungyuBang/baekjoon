@@ -6,7 +6,7 @@ heights = list(map(int, input().split()))
 heights.sort()
 
 left, right = 0, max(heights)
-anwser = 0
+answer = 0
 
 while left <= right :
   mid = (left + right) // 2
@@ -22,4 +22,4 @@ while left <= right :
     down = mid - 1
 
 
-print(anwser)
+print(answer)

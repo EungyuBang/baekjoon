@@ -33,3 +33,18 @@ for i in str(multifly):
 #  0~9 숫자의 개수 출력
 for c in counts:
     print(c)  # 순서대로 counts[0], counts[1], ..., counts[9] 출력
+
+
+A = int(input())
+B = int(input())
+C = int(input())
+
+ABC = A * B * C
+
+arr = [0]* 10 
+
+for i in str(ABC) : #'1573035739'
+  arr[int(i)] += 1 # 이거 중요!!!!!!!!!!!!!!
+
+for x in arr :
+  print(x)

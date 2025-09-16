@@ -16,3 +16,6 @@ def nums() :
       visited[i] = False
 
 nums()
+
+# num_arr → 리스트 그대로 출력
+# *num_arr → 리스트 원소들을 풀어서 출력
