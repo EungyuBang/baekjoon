@@ -19,4 +19,3 @@ def num(A,B,C) :
 print(num(A,B,C))
 
 
-
