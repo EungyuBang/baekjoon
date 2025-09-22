@@ -6,25 +6,31 @@ N, M, V = map(int, input().split())
 
 node_list = [[] for _ in range(N+1)]
 
+dfs_order = []
+bfs_order = []
 
 for _ in range(M) :
   n1, n2 = map(int, input().split())
   node_list[n1].append(n2)
   node_list[n2].append(n1)
 
+for neighbor in node_list :
+  neighbor.sort()
+
 #dfs
 def dfs(node, visited = None) :
   if visited is None :
     visited = set()
-  
   visited.add(node)
-  print(node, end=' ')
+  dfs_order.append(node)
 
   for neighbor in node_list[node] :
     if neighbor not in visited :
       dfs(neighbor,visited)
-print(V)
+dfs(V)
 
+
+#bfs
 def bfs(start) :
   visited = set()
   queue = deque([start])
@@ -32,20 +38,12 @@ def bfs(start) :
 
   while queue :
     node = queue.popleft()
-    print(node, end= ' ')
-
+    bfs_order.append(node)
     for neighbor in node_list[node] :
       if neighbor not in visited :
         queue.append(neighbor)
         visited.add(neighbor)
+bfs(V)
 
-
-
-
-
-
-
-
-
-
-#bfs
+print(*dfs_order)
+print(*bfs_order)

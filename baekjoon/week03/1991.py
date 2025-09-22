@@ -10,21 +10,21 @@ for _ in range(N) :
 
   tree[root] = left,right
 
-def preorder(node) :
+def preorder(node) : # 루트 - 왼쪽 - 오른쪽
   if node == '.' :
      return
   print(node, end='')
   preorder(tree[node][0])
   preorder(tree[node][1])
 
-def inorder(node) :
+def inorder(node) : # 왼쪽 - 루트 - 오른쪽 
   if node == '.' :
     return
   inorder(tree[node][0])
   print(node, end='')
   inorder(tree[node][1])
 
-def postorder(node) :
+def postorder(node) : # 왼쪽 - 오른쪽 - 루트 
   if node == '.' :
     return
   postorder(tree[node][0])
@@ -36,3 +36,4 @@ print()
 inorder('A')
 print()
 postorder('A')
+
