@@ -20,6 +20,21 @@ def dfs_list(node, visited = None) :
 dfs_list(0)
 
 
+# # 노드 개수
+# V = 4
+
+# def dfs_list(node, graph, visited):
+#     visited[node] = True
+#     print(node, end=' ')
+#     for neighbor in graph[node]:
+#         if not visited[neighbor]:
+#             dfs_list(neighbor, graph, visited)
+
+# # 실행
+# visited = [False] * V   # 방문 배열 초기화
+# dfs_list(0, graph_list, visited)
+
+
 # 인접 행렬
 
 graph_matrix = [

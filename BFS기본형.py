@@ -9,19 +9,22 @@ graph_list = {
 }
 
 
-def bfs_list(start) :
-  visited = set()
-  queue = deque([start])  
-  visited.add(start)
+def bfs_list(start):
+    # visited 배열을 노드 개수만큼 False로 초기화
+    visited = [False] * V
+    
+    queue = deque([start])  
+    visited[start] = True # 시작 노드 방문 처리
 
-  while queue :
-    node = queue.popleft()
-    print(node, end=' ')
+    while queue:
+        node = queue.popleft()
+        print(node, end=' ')
 
-    for neighbor in graph_list[node] :
-      if neighbor not in visited :
-        queue.append(neighbor)
-        visited.add(neighbor)
+        for neighbor in graph_list[node]:
+            # neighbor가 아직 방문되지 않았으면
+            if not visited[neighbor]:
+                queue.append(neighbor)
+                visited[neighbor] = True # 방문 처리
 
 bfs_list(0)
         

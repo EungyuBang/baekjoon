@@ -14,6 +14,9 @@ for _ in range(M) :
   node_list[n1].append(n2)
   node_list[n2].append(n1)
 
+  for i in range(1, N + 1):
+    node_list[i].sort()
+
 for neighbor in node_list :
   neighbor.sort()
 

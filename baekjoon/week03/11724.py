@@ -1,8 +1,5 @@
-# collections 모듈에서 deque(데크)를 가져와 큐로 활용
 from collections import deque
-# sys 모듈에서 stdin.readline을 가져와 입력 속도 최적화
 import sys
-# input 함수를 sys.stdin.readline로 재정의하여 빠른 입력 사용
 input = sys.stdin.readline
 
 # 첫 줄에서 노드의 개수 N과 간선의 개수 M을 입력받음
