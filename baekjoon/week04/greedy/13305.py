@@ -11,8 +11,8 @@ minOilPrice = oilValue[0] # 이거 계속 업데이트 해야됨
 totalCost = 0 # 이것도 업데이트 생각
 
 for i in range(N-1) :
-  totalCost += minOilPrice * roadValue[i]
+  totalCost += minOilPrice * roadValue[i] # 업데이트
   if oilValue[i+1] < minOilPrice :
-    minOilPrice = oilValue[i+1]
-    
+    minOilPrice = oilValue[i+1] # 업데이트
+
 print(totalCost)

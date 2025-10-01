@@ -21,5 +21,5 @@ for _ in range(T) :
   for i in range(1, N) :
     if ranking[i][1] < standardItv :
       cnt += 1
-      standardItv = ranking[i][1]
+      standardItv = ranking[i][1] # 업데이트
   print(cnt)

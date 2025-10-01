@@ -9,3 +9,5 @@ sumList[0] = time[0]
 for i in range(1, N) :
   sumList[i] = sumList[i-1] + time[i]
 print(sum(sumList))
+
+# 이전까지 누적된 결과에만 의존하므로 순차적으로 진행되면 된다. 

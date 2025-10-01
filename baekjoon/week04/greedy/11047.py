@@ -18,6 +18,6 @@ for i in range(len(value)) :
     continue
   coin_count = K // value[i]
   cnt += coin_count
-  K = K % value[i]
+  K = K % value[i] # 업데이트
 
 print(cnt)

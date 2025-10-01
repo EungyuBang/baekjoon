@@ -19,6 +19,6 @@ for term in split_[1:] :
   for num_str in sub_num :
     term_sum += int(num_str)
 
-  result -= term_sum
+  result -= term_sum # 업데이트
 
 print(result)

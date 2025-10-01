@@ -23,6 +23,6 @@ cnt = 1
 for endT, startT in timeTable[1:] :
   if startT >= lastOutTime :
     cnt += 1
-    lastOutTime = endT
+    lastOutTime = endT #업데이트
 
 print(cnt)

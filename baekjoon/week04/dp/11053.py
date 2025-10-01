@@ -1,7 +1,11 @@
 N = int(input())
 A = list(map(int, input().split()))
 
-dpTable = [0] * N
+dpTable = [1] * N
 
-print(A)
-print(dpTable)
+for i in range(N) :
+  for j in range(i) :
+    if A[j] < A[i] :
+      dpTable[i] = max(dpTable[i], dpTable[j] + 1)
+      
+print(max(dpTable))
